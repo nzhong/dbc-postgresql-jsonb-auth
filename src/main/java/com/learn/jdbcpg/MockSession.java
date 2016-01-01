@@ -5,6 +5,7 @@ import com.learn.jdbcpg.model.service.AppUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.sql.*;
 
 public class MockSession {
@@ -22,7 +23,7 @@ public class MockSession {
         log.debug("jdbcUrl={}, jdbcUser={}, jdbcPswd={}", jdbcUrl, jdbcUser, jdbcPswd);
     }
 
-    public void mockLogin(final String userName, final String plainTextPswd) {
+    public void mockLogin(final String userName, final String plainTextPswd) throws IOException {
         int loginUserId = -1;
         Connection conn = null;
         Statement stmt = null;
