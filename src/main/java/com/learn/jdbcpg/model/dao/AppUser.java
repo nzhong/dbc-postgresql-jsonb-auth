@@ -37,7 +37,7 @@ public class AppUser {
 		others.put( "someKey", "someVal" );
 	}
 
-	public boolean SerializeToDb ( Connection conn, int loginUserId, String[] msg ) throws SQLException, IOException {
+	public boolean SerializeToDb ( Connection conn, int loginUserId ) throws SQLException, IOException {
 		boolean bSuccess = true;
 
 		if ( userId<=0 )  // this is a new entry. call doInsert
